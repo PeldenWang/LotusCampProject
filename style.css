@@ -1,0 +1,144 @@
+/* NAVIGATION */
+
+* {
+    font-family: sans-serif;
+}
+
+.navContainer {
+    background-color: #1C4E80;
+}
+
+#navigation {
+    background-color: #1C4E80;
+    
+}
+
+.nav-link {
+    font-size: 16px;
+    color: white;
+}
+
+.btn {
+    background-color: #D1884F;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.viewButton {
+    background-color: #D1884F;
+    color: white;
+    border-radius: 6px;
+    font-size:smaller;
+}
+
+/* METHOD */
+.methodColor {
+    background-color:   #44633F;
+    color: white;
+    border-radius: 6px;
+}
+
+
+/* WHAT WE OFFER */
+.offers {
+    background-color: #dddddd;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.offers h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.offer-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.offer-card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 20px;
+    width: 23%;
+    text-align: center;
+}
+
+.offer-card img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+#offericon {
+    width: 70px;
+    height: 70px;
+}
+
+.offer-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.offer-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .offer-cards {
+        flex-direction: column;
+    }
+
+    .offer-card {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+/* CAMPING PRICE PACKAGES */
+
+#headColor {
+    color: white;
+    background-color: #44633F;
+}
+
+/* MEET OUR TEAM */
+.teamImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.teamCard {
+    width: 32%;
+}
+
+
+/* RAFTING VIDEO */
+.videoRafting {
+    border-radius: 6px;
+    width: 100%;
+    height: auto;
+}
+
+
+
+#fillcolor {
+    background-color: #44633F;
+    color: white;
+    border-radius: 6px;
+}
+
+
+/* MAP */
+.mapBox {
+    border-radius: 6px;
+}
+
+
+

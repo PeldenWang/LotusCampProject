@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+    
+
+    <!-- NAVIGATION -->
+    <div class="navContainer">
+
+        <div id="navigation" class="container">
+          <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between ">
+            <div class="col-md-3 mb-2 mb-md-0">
+              <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+                <img src="../assests/images/lotusfinallogo.svg" alt="" width="80">
+              </a>
+            </div>
+      
+            <ul class="nav col-12 col-md-auto mb-5 justify-content-center mb-md-0">
+              <li><a href="../index.html" class="nav-link px-4">Home</a></li>
+              <li><a href="../public/about.html" class="nav-link px-4">About Us</a></li>
+              <li><a href="../public/services.html" class="nav-link px-4">Services</a></li>
+              <li><a href="../public/activities.html" class="nav-link px-4">Activities</a></li>
+              <li><a href="#" class="nav-link px-4">Contact Us</a></li>
+            </ul>
+<!-- Button trigger modal -->
+     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Book Now
+    </button>
+          </header>
+        </div>
+      </div>   
+
+
+<br>
+<!-- HEAD TEXT AND HEAD IMAGE -->
+<div class="container">
+  <div class="card text-bg-dark">
+    <img src="../assests/images/aboutimg.jpg" class="card-img" alt="...">
+    <div class="card-img-overlay text-center m-5">
+      <h2 class="card-title fw-bold">Get in touch with us</h2>
+      <p class="card-text">We are here to help and answer any questions you might have. We look forward to haering from you.</p>
+    </div>
+  </div>
+  </div>
+    
+
+<br>
+<!--CONTACT FORMS -->
+      <div class="container">
+        <main>
+      
+          <div class="row g-5">
+            <div id="fillcolor" class="col-md-5 col-lg-4 order-md-last">
+              <h4 class="d-flex justify-content-between align-items-center mb-2">
+                <span>Contact Information</span>
+              </h4>
+              <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                  <div>
+                    <h6 class="my-2">Phone number</h6>
+                    <small class="text-body-secondary">+975-77239288</small>
+                  </div>
+                 <img src="../assests/icons/phonecall.svg" alt="" width="20">
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                  <div>
+                    <h6 class="my-2">Email address</h6>
+                    <small class="text-body-secondary">lotuscamp2024@gmail.com</small>
+                  </div>
+                  <img src="../assests/icons/email.svg" alt="" width="20">
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                  <div>
+                    <h6 class="my-2">Address</h6>
+                    <small class="text-body-secondary">Punakha, Lhakhu</small>
+                  </div>
+                  <img src="../assests/icons/location.svg" alt="" width="20">
+                </li>
+                
+                <li class="my-2 list-group-item d-flex justify-content-between">
+                 <img src="../assests/icons/whatsapp.svg" alt="" width="30">
+                 <img src="../assests/icons/telegram.svg" alt="" width="30">
+                 <img src="../assests/icons/facebook.svg" alt="" width="30">
+                 <img src="../assests/icons/instagram.svg" alt="" width="30">
+                </li>
+              </ul>
+            </div>
+            
+            <div class="col-md-7 col-lg-8">
+              <h4 class="mb-3">Fill & say something to us</h4>
+              <form class="needs-validation" novalidate="">
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label for="firstName" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                    <div class="invalid-feedback">
+                      Valid first name is required.
+                    </div>
+                  </div>
+      
+                  <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                    <div class="invalid-feedback">
+                      Valid last name is required.
+                    </div>
+                  </div>
+      
+                  <div class="col-12">
+                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                    <input type="number" class="form-control" id="phoneNumber" placeholder="+975-12345678" required="Enter your phone number">
+                    <div class="invalid-feedback">
+                      Enter your phone number.
+                    </div>
+                  </div>
+      
+                  <div class="col-12">
+                    <label for="email" class="form-label">Email<span class="text-body-secondary">(Optional)</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                    <div class="invalid-feedback">
+                      Please enter a valid email address for shipping updates.
+                    </div>
+                  </div>
+      
+                  <div class="col-md-12">
+                    <label for="country" class="form-label">Select subject</label>
+                    <select class="form-select" id="country" required="">
+                      <option value="">Inquiry</option>
+                      <option>Booking</option>
+                      <option>Partnership</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid subject.
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Write your message here</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div> 
+      
+                <button class="btn" type="submit">Send to whatsapp</button>
+              </form>
+            </div>
+          </div>
+        </main>
+
+
+<br>
+        <!-- FREQUIENTLY AKED QUESTIONS -->
+        <article class="my-3" id="accordion">
+          
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+                <h2>Frequently Asked Questions</h2>
+              </div>
+
+            <div>
+              <div class="bd-example-snippet bd-code-snippet">
+        <div class="bd-example m-0 border-0">
+              <div class="accordion" id="accordionExample">
+
+                <div class="accordion-item">
+                  <h4 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    How do I make a reservation for a campsite?
+                    </button>
+                  </h4>
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
+                    <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, sunt magni, eius obcaecati accusamus quae quod ut repellat quis rem corrupti totam inventore similique reprehenderit necessitatibus delectus in praesentium velit!
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h4 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    What amenities are provided at the campsite?                    </button>
+                  </h4>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
+                    <div class="accordion-body">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, quidem quos a vero sequi accusamus fugiat esse necessitatibus quisquam eius magnam perspiciatis, consequuntur quam commodi suscipit, obcaecati ipsum unde! A.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h4 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    What is the cancellation policy for campsite reservations?                    </button>
+                  </h4>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
+                    <div class="accordion-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto error odit ad officia sit tenetur! Exercitationem odio distinctio ut modi. Cupiditate consequatur aliquam nisi magni illum nemo repellat reiciendis id.
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+        </div>
+      </div>
+            </div>
+          </article>
+
+
+<br>
+<!-- CUSTOMERS FEEDBACK -->
+<article class="my-3" id="modal">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h2>Your feedback</h2>
+        <p>What is your opinion of this website</p>
+      </div>
+
+      <div>
+         <div class="bd-example-snippet bd-code-snippet">
+      <div class="bd-example m-0 border-0">
+     <div class="d-flex justify-content-between flex-wrap">
+
+         <div>
+            <img src="../assests/icons/saddestface.svg" alt="" width="40">
+         </div>
+         <div>
+            <img src="../assests/icons/sadface.svg" alt="" width="40">
+         </div>
+         <div>
+            <img src="../assests/icons/normalface.svg" alt="" width="40">
+         </div>
+         <div>
+            <img src="../assests/icons/smileface.svg" alt="" width="40">
+         </div>
+         <div>
+            <img src="../assests/icons/happynormalface.svg" alt="" width="40">
+         </div>
+         <div>
+            <img src="../assests/icons/happyface.svg" alt="" width="40">
+         </div>
+    </div>
+        
+  </div>
+</div>
+      </div>
+    </article>
+
+<!-- RANGE  -->
+<input type="range" class="form-range" min="0" max="5" id="customRange2">
+
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Let us know how you think about us</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+
+<div>
+   <button class="col-6 btn" type="submit">Send your feedback</button>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Where are you from?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="vstack gap-3">
+          <a class="link-offset-2 link-underline link-underline-opacity-0 text-body-emphasis" href="../public/local.html"><div class="p-2 methodColor"><h4>Local Resident</h4></div></a>
+          <a class="link-offset-2 link-underline link-underline-opacity-0 text-body-emphasis" href="../public/regional.html"><div class="p-2 methodColor"><h4>Regional Tourist</h4></div></a>
+          <a class="link-offset-2 link-underline link-underline-opacity-0 text-body-emphasis" href="../public/international.html"><div class="p-2 methodColor"><h4>International tourist</h4></div></a>
+        </div>
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br>
+<!-- FOOTER -->
+<footer id="footer" class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        <img src="../assests/images/blacklotuslogofinal.svg" alt="" width="50">
+      </a>
+       <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Lotus Camp, Inc All right reserved</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../assests/icons/whatsapp.svg" alt="" width="20"></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../assests/icons/telegram.svg" alt="" width="20"></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../assests/icons/facebook.svg" alt="" width="20"></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../assests/icons/instagram.svg" alt="" width="20"></a></li>
+    </ul>
+  </footer>
+
+
+</body>
+</html>

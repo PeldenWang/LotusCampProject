@@ -3,32 +3,343 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LotusCampProject</title>
+    <title>LotusCampWebsiteProject</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+
+
+    <!-- NAVIGATION -->
+<div class="navContainer">
+    <div id="navigation" class="container">
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between ">
+        <div class="col-md-3 mb-2 mb-md-0">
+          <a href="#" class="d-inline-flex link-body-emphasis text-decoration-none">
+            <img src="./assests/images/lotusfinallogo.svg" alt="" width="80">
+          </a>
+        </div>
+  
+        <ul class="nav col-12 col-md-auto mb-5 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-4">Home</a></li>
+          <li><a href="./public/about.html" class="nav-link px-4">About Us</a></li>
+          <li><a href="./public/services.html" class="nav-link px-4">Services</a></li>
+          <li><a href="./public/activities.html" class="nav-link px-4">Activities</a></li>
+          <li><a href="./public/contact.html" class="nav-link px-4">Contact Us</a></li>
+        </ul>
+  
+     <!-- Button trigger modal -->
+     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Book Now</button>
+      </header>
+    </div>
+
+  </div>   
+
+
+<!-- CAROUSEL -->
+<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <img class="homeimagefirst" src="./assests/images/campingmain.jpg" alt="" width="100%" height="500">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Escape serenity to campers paradise</h1>
+            <p class="opacity-10">Keep calm and enjoy your camping with us</p>
+                 <!-- Button trigger modal -->
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                 Instant book
+                </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item active">
+        <img class="homeimagesecond" src="./assests/images/raftsonwater.jpg" alt="" width="100%" height="500">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Enjoy rafting adventure</h1>
+            <p>Keep your camping trip enjoy with rafting</p>
+
+            <div class="getInTouch"><p><a class="btn btn-lg" href="./public/contact.html">Get in touch</a></p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img class="homeimagethird" src="./assests/images/swimmingpool.jpg" alt="" width="100%" height="500">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Hiking trips</h1>
+            <p>We provide hiking adventure trip</p>
+            <p><a class="btn btn-lg" href="./public/contact.html">Contact Us</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+<br>
+<!-- WHAT WE OFFER -->
+    <div class="container">
+      <div class="offer-header p-3 pb-md-4 mx-auto text-center">
+        <h2>What we offer</h2>
+      </div>
+        <div class="offer-cards">
+            <div class="offer-card">
+                <img id="offericon" src="./assests/icons/tenticon.svg" alt="Camping">
+                <h3>Camping</h3>
+                <p>Enjoy the best glamping experience with us.</p>
+            </div>
+            <div class="offer-card">
+                <img id="offericon" src="./assests/icons/rafticon.svg" alt="Rafting">
+                <h3>Rafting</h3>
+                <p>Splash yourself into the white water of Mochhu & Pochhu river.</p>
+            </div>
+            <div class="offer-card">
+                <img id="offericon" src="./assests/icons/hikeicon.svg" alt="Hiking">
+                <h3>Hiking tips</h3>
+                <p>Join our guided tours & sightseeing nearby campsite.</p>
+            </div>
+            <div class="offer-card">
+                <img id="offericon" src="./assests/icons/fireicon.svg" alt="Bonfire">
+                <h3>Bonfire event</h3>
+                <p>Create your memorable events with us at an affordable price.</p>
+            </div>
+        </div>
+    </div>
+
     
-<h1>hello world</h1>
-<h1>HELLO PELDEN</h1>
-<h2>My name is Lorem ipsum</h2>
-<h3>jgfytvjhvhg</h3>
-<P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione facilis error necessitatibus neque, fugiat, optio earum sequi laborum quae nulla nisi ipsa dolores accusamus vel porro odio totam voluptatibus quos.</P>
-<p>orem ipsum dolor sit amet consectetur adipisi</p>
-<p>weeeee</p>
-<p> Nim wangchuck</p>
-<p>kkkkkkkkkkkkkk</p>
-    <p>weeeee</p>
-<p> Nim wangchuck</p>
-<p> bal .....gayalal</p>
+<br>
+<!--CAMPING PRICE PACKAGES -->
+<div class="container py-3">
 
-<hr>
-<h1>Hello world</h1>
-<h2>Hello World</h2>
-<h3>Hello World</h3>
-<h4>Hello world</h4>
-<h5>Hello world</h5>
-<h6>Hello world</h6>
-<p>Lorem Ipsum</p>
-<hr>
+  <header>
+    <div class="camp-price-header p-3 pb-md-4 mx-auto text-center">
+      <h2>Camping price packages</h2>
+    </div>
+  </header>
 
+  <main>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div id="headColor" class="card-header py-3">
+            <h4 class="my-0 fw-normal">Local Resident</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">Nu.3,000<small class="text-body-secondary fw-light">/pax</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Camping tent</li>
+              <li>Three meals</li>
+              <li>Bonfire</li>
+              <li>Swimming</li>
+            </ul>
+                 <!-- Button trigger modal -->
+                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  Instant Book
+                 </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div id="headColor" class="card-header py-3">
+            <h4 class="my-0 fw-normal">Regional Tourist</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">INR.5,000<small class="text-body-secondary fw-light">/pax</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Camping tents</li>
+              <li>Three meals</li>
+              <li>Bonfire</li>
+              <li>Swimming</li>
+            </ul>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  Instant Book
+                </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div id="headColor" class="card-header py-3">
+            <h4 class="my-0 fw-normal">International Tourist</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$100<small class="text-body-secondary fw-light">/pax</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Camping tents</li>
+              <li>Three meals</li>
+              <li>Bonfire</li>
+              <li>Swimming</li>
+            </ul>
+
+                 <!-- BUTTEN TRIGGER MODAL -->
+                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  Instant Book
+                 </button>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<br>
+<!-- RAFTING PRICE PACKAGES -->
+    <div class="raft-price-header p-3 pb-md-4 mx-auto text-center">
+      <h2>Rafting price packages</h2>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;"><h4>Price</h4></th>
+            <th style="width: 22%;"><h4>Capacity</h4></th>
+            <th style="width: 22%;"><h4>Timing</h4></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start"><h4>Pho-chu rafting</h4></th>
+            <td><h5>Nu.15,000/raft</h5><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            <td><h5>6 member</h5><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            <td><h5>2 hours</h5><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start"><h4>Mo-chu rafting</h4></th>
+            <td><h5>Nu.10,000/raft</h5></td>
+            <td><h5>6 member</h5><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            <td><h5>1:30 mins</h5><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </main>
+
+
+<br>
+  <!-- VIDEO BLOG -->
+  <div class="blog-header p-3 pb-md-4 mx-auto text-center">
+    <h2>Our campsite blog</h2>
+  </div>
+  <div>
+    <video src="./assests/images/videorafting.mp4" class="videoRafting" autoplay playbutton></video>
+  </div>
+
+
+<br>
+<!-- FACILITIES -->
+<div class="popular-header p-3 pb-md-4 mx-auto text-center">
+  <h2>Our premium facilities</h2>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div id="headColor" class="card h-100">
+      <img src="./assests/images/campingmain.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Cottage Tents</h5>
+        <p class="card-text">We offer a luxurious glamping experience, featuring tents, ensuite bathrooms, and dinning decks that immerse guests in the beauty of the great outdoors.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div id="headColor" class="card h-100">
+      <img src="./assests/images/raftsonwater.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Wi-Fi</h5>
+        <p class="card-text">We encourages guests to unplug and embrace nature, Free WiFi is available to allow connectivity and productivity needs during the glamping stay. </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div id="headColor" class="card h-100">
+      <img src="./assests/images/swimmingpool.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Conference Hall</h5>
+        <p class="card-text">Our conference hall provides a serene and well-equipped space for meetings, seminars, or events, allowing guests to mix business and pleasure during their glamping retreat.. Capacity 40</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br>
+<!-- Customer review -->
+<div class="Reviews-header p-3 pb-md-4 mx-auto text-center">
+  <h2>What customers says about us</h2>
+</div>
+
+<div class='sk-ww-google-reviews' data-embed-id='25415364'></div><script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Where are you from?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="vstack gap-3">
+          <a class="link-offset-2 link-underline link-underline-opacity-0 text-body-emphasis" href="./public/local.html"><div class="p-2 methodColor"><h4>Local Resident</h4></div></a>
+          <a class="link-offset-2 link-underline link-underline-opacity-0 text-body-emphasis" href="./public/regional.html"><div class="p-2 methodColor"><h4>Regional Tourist</h4></div></a>
+          <a class="link-offset-2 link-underline link-underline-opacity-0 text-body-emphasis" href="./public/international.html"><div class="p-2 methodColor"><h4>International tourist</h4></div></a>
+        </div>
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br>
+<!-- FOOTER -->
+    <footer id="footer" class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+          <img src="./assests/images/blacklotuslogofinal.svg" alt="" width="50">
+        </a>
+         <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Lotus Camp, Inc All right reserved</span>
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-body-secondary" href="#"><img src="./assests/icons/whatsapp.svg" alt="" width="20"></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="#"><img src="./assests/icons/telegram.svg" alt="" width="20"></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="#"><img src="./assests/icons/facebook.svg" alt="" width="20"></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="#"><img src="./assests/icons/instagram.svg" alt="" width="20"></a></li>
+      </ul>
+    </footer>
+
+ 
 </body>
 </html>
