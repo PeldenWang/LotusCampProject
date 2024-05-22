@@ -108,16 +108,15 @@
 }
 
 /* MEET OUR TEAM */
-.teamImage {
+#teamImage {
     width: 150px;
     height: 150px;
     border-radius: 50%;
 }
 
 .teamCard {
-    width: 32%;
+    width: 30%;
 }
-
 
 /* RAFTING VIDEO */
 .videoRafting {
