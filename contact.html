@@ -145,7 +145,7 @@
       
                   <div class="col-12">
                     <label for="email" class="form-label">Email address<span class="text-body-secondary">(Optional)</span></label>
-                    <input type="email" class="form-control" id="emailAddress" placeholder="you@example.com">
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
 
                     <div class="invalid-feedback">
                       Please enter a valid email address for shipping updates.
@@ -166,10 +166,10 @@
 
                   <div class="mb-3">
                     <label for="writing-message" class="form-label">Write your message here</label>
-                    <textarea class="form-control" id="writeMessage" rows="3"></textarea>
+                    <textarea class="form-control" id="message" rows="3"></textarea>
                   </div> 
     
-                <button class="btn" type="submit" onclick="sendToWhatsApp()"">Send to Whatsapp</button>
+                <button class="btn" type="submit" onclick="sendToWhatsApp()">Send to Whatsapp</button>
               </form>
             </div>
           </div>
@@ -271,34 +271,35 @@
 	<!----- End Footer Middle Area ----->
 	<!--==================================================-->
 
- 
-
-
-
   <script>
     function sendToWhatsApp() {
+        // Get form data
         var firstName = document.getElementById('firstName').value;
         var lastName = document.getElementById('lastName').value;
         var phoneNumber = document.getElementById('phoneNumber').value;
-        var emailAddress = document.getElementById('emailAddress').value;
+        var email = document.getElementById('email').value;
         var subject = document.getElementById('subject').value;
-        var writeMessage = document.getElementById('writeMessage').value;
+        var message = document.getElementById('message').value;
 
+        // Construct the message
         var whatsappMessage = `Please fill out the following form:%0A%0A` +
             `First Name: ${encodeURIComponent(firstName)}%0A` +
             `Last Name: ${encodeURIComponent(lastName)}%0A` +
             `Phone Number: ${encodeURIComponent(phoneNumber)}%0A` +
-            `Email Address (Optional): ${encodeURIComponent(emailAddress)}%0A` +
+            `Email Address (Optional): ${encodeURIComponent(email)}%0A` +
             `Select Subject: ${encodeURIComponent(subject)}%0A` +
-            `Write your message here: ${encodeURIComponent(writeMessage)}`;
+            `Write your message here: ${encodeURIComponent(message)}`;
 
-        var phone = "+97517898345"; // Replace with your WhatsApp phone number in international format, e.g., "1234567890"
-        var whatsappURL = `https://wa.me/${+97517898345}?text=${whatsappMessage}`;
+        // WhatsApp number to send the message to (replace with your number)
+        var phone = "97517898345"; // Replace with your WhatsApp phone number in international format, e.g., "1234567890"
 
+        // Construct the WhatsApp URL
+        var whatsappURL = `https://wa.me/97517898345?text=${whatsappMessage}`;
+
+        // Open the WhatsApp URL
         window.open(whatsappURL, '_blank');
     }
 </script>
-
 
 </body>
 </html>
