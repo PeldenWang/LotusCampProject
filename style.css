@@ -1,15 +1,13 @@
-/* NAVIGATION */
-
-* {
+body, html {
     font-family: sans-serif;
 }
 
-.navContainer {
+/*FOR ALL NAVIGATION */
+.navbar {
     background-color: #1C4E80;
 }
 
-#navigation {
-    background-color: #1C4E80;
+.navbar-nav {
     
 }
 
@@ -17,7 +15,18 @@
     font-size: 16px;
     color: white;
 }
+/*END FOR ALL NAVIGATION */
 
+
+
+/* HEADING 2 */
+h2 {
+    color: #44633F;
+}
+
+
+
+/* FOR ALL BUTTONS */
 .btn {
     background-color: #D1884F;
     color: white;
@@ -25,12 +34,109 @@
     font-weight: 600;
 }
 
-.viewButton {
-    background-color: #D1884F;
-    color: white;
-    border-radius: 6px;
-    font-size:smaller;
+.btn:hover {
+    background-color: #44633F;
 }
+
+.viewButton {
+    text-decoration: none;
+    color: #D1884F;
+}
+/*END FOR ALL BUTTONS */
+
+
+
+/* CAROUSEL */
+.carousel-item{
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center center;
+  height:400px;
+  position:relative;
+}
+
+.homeSlide1_img{
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./assests/images/tent-hero.jpg");
+}
+
+.homeSlide2_img{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./assests/images/briefing-hero.jpg");
+}
+
+.homeSlide3_img{
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("./assests/images/swimmingpool-hero.jpg");
+}
+
+.carousel-caption{
+    bottom:6.25rem;
+}
+/* END OF CAROUSEL */
+
+
+
+
+
+
+/* OTHER SLIDE IMAGE */
+.otherSlide1_img{
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./assests/images/view-raft.jpg");
+}
+
+.otherSlide2-img{
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./assests/images/mans-on-rafting.jpg");
+}
+
+.otherSlide3_img{
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("./assests/images/meals-outside.jpg");
+}
+/*END OF THE OTHER SLIDE IMAGE */
+
+
+
+
+
+
+/* WITHIN SERVICE SECTION */
+.serviceBookImg{
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./assests/images/kids-chair-hero.jpg");
+}
+/* WITHIN SERVICE SECTION */
+
+
+
+
+
+/* WITHIN ACTIVITIES SECTION */
+.activityBookImg{
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./assests/images/mans-on-rafting.jpg");
+}
+/* WITHIN ACTIVITIES SECTION */
+
+
+
+
+
+/* NAV IMAGE AND HEAD TEXT */
+.aboutSectionHead{
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./assests/images/about-us.jpg");
+}
+
+.servicesSectionHead{
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./assests/images/services.jpg");
+}
+
+.activitySectionHead{
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./assests/images/activities.jpg");
+}
+
+.contactSectionHead{
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./assests/images/lotus-word-hero.jpg");
+}
+/*END OF THE NAV IMAGE AND HEAD TEXT */
+
+
+
+
 
 /* METHOD */
 .methodColor {
@@ -38,6 +144,10 @@
     color: white;
     border-radius: 6px;
 }
+/*END OF THE METHOD */
+
+
+
 
 
 /* WHAT WE OFFER */
@@ -99,13 +209,20 @@
         margin: 10px auto;
     }
 }
+/*END OF THE WHAT WE OFFER */
+
+
+
 
 /* CAMPING PRICE PACKAGES */
-
 #headColor {
     color: white;
     background-color: #44633F;
 }
+/*END OF CAMPING PRICE PACKAGES */
+
+
+
 
 /* MEET OUR TEAM */
 #teamImage {
@@ -117,27 +234,71 @@
 .teamCard {
     width: 30%;
 }
+/*END DOF THE MEET OUR TEAM */
+
+
+
 
 /* RAFTING VIDEO */
 .videoRafting {
     border-radius: 6px;
     width: 100%;
-    height: auto;
 }
+/*END FO THE RAFTING VIDEO */
 
 
 
+
+
+/* FOR CARDS FILL GREEN */
 #fillcolor {
     background-color: #44633F;
     color: white;
     border-radius: 6px;
 }
+/*END FOR CARDS FILL GREEN */
+
+
 
 
 /* MAP */
 .mapBox {
     border-radius: 6px;
+    height: 400px;
 }
+/*END OF THE MAP */
 
 
 
+
+  /* activites coures caption  */
+  .featurette img {
+    flex: 0 0 auto;
+   height: auto;
+   width:550px ;
+    border-radius: 6px;
+  }
+  /* activies page heading */
+  .featurette-heading {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+  }
+     /* activies page paragraph */
+  .featurette-lead {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    /* text-align: left; */
+  }
+  /* activies page ol  */
+  .featurette p {
+    margin-bottom: .75rem;
+    text-align: left;
+  }
+  
+  .tick-icon {
+    color: green;
+    margin-right: 1rem;
+    text-align: left;
+  }
+  

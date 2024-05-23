@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lotus Camp Website Project</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+  <body>
+
+
+   <!--==================================================-->
+	<!----- Start repeat navi footer Script----->
+	<!--==================================================-->
+
+	<script src="//code.jquery.com/jquery.min.js"></script>
+
+	<script type="text/javascript" >
+		//<!-- start navigation -->
+		$.get("navigation.html", function(data){
+			$("#navigation").replaceWith(data);
+		});
+
+		// <!-- start footer -->
+		$.get("footer.html", function(data){
+			$("#footer").replaceWith(data);
+		});
+		
+	</script>
+
+
+	<!--==================================================-->
+	<!----- End repeat navi footer Script----->
+	<!--==================================================-->
+
+  <!--==================================================-->
+	<!----- Start Navigation Area ----->
+	<!--==================================================-->
+	
+	<div id="navigation"></div>
+
+	<!--==================================================-->
+	<!----- End Navigation Area ----->
+	<!--==================================================-->
+
+<!-- ACTIVITIES HEADING AND IMAGE -->
+<div id="myCarousel" class="mb-6">
+
+  <div class="carousel-inner">
+    <div class="carousel-item activitySectionHead active">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Activities</h1>
+          <p>Lotus Camp's diverse activity offerings, from bird watching and mountain biking to rafting and cultural tours, allow guests to immerse themselves in Bhutan's natural wonders and rich heritage.</p>
+        </div>
+      </div>
+    </div>
+</div>
+<!--END OF THE ACTIVITIES HEADING AND IMAGE -->
+<br><br>
+    <!-- ACTIVITIES -->
+        <div class="container">
+      <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading fw-normal lh-1">Camping <span class="text-body-secondary"></span></h2>
+              <p class=>Lotus Camp offers a luxurious take on traditional camping, providing glamorous tents with plush amenities that allow guests to reconnect with nature in comfort and style.</p>
+              <p class="lead"><ul>
+                <ol><span class="tick-icon">&#10003;</span>Tented a accomodation on twin sharing basis</ol>
+                <ol><span class="tick-icon">&#10003;</span>All meals and tea and coffee/ Bonfire & BBQ </ol>
+                <ol><span class="tick-icon">&#10003;</span>Standard toilets / Hot shower </ol>
+              </ul></p>
+            </div>
+            <!-- image -->
+            <div class="col-md-5">
+               <img class="img-fluid" src="./assests/images/tent-img.jpg" alt="">
+            </div>
+          </div>
+      
+          <hr>
+      
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading fw-normal lh-1">Rafting & Kayaking <span class="text-body-secondary"></span></h2>
+              <p class="">We arranges exhilarating rafting and kayaking excursions on Mo chhu & Pho Chhu rivers, enabling guests to explore Bhutan's stunning waterways and landscapes in an adventurous yet safe manner.</p>
+              <p class="lead"><ul>
+                 <ol><span class="tick-icon">&#10003;</span>6 members per raft</ol>
+                 <ol><span class="tick-icon">&#10003;</span>2 hours travel</ol>
+                 <ol><span class="tick-icon">&#10003;</span>Expert guiding with the full safety</ol>
+              </ul></p>
+            </div>
+            <!-- image -->
+            <div class="col-md-5 order-md-1">
+               <img class="img-fluid" src="./assests/images/raft-kayaking.jpg" alt="">
+            </div>
+          </div>
+          
+          <hr>
+      
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading fw-normal lh-1">Guided Tour<span class="text-body-secondary"></span></h2>
+              <p class=>Our guided tours led by local experts immerse guests in Bhutan's captivating culture, history, and natural beauty, elevating the overall glamping experience.</p>
+              <p class="lead"><ul>
+                <ol><span class="tick-icon">&#10003;</span>Hike to khamsum Yulley monastery</ol>
+                <ol><span class="tick-icon">&#10003;</span>Day picnic  to Hka Tsho</ol>
+                <ol><span class="tick-icon">&#10003;</span>Day hike to Seula goanpa</ol>
+              </ul></p>
+            </div>
+            <!-- image -->
+            <div class="col-md-5">
+               <img class="img-fluid" src="./assests/images/guided-tour.jpg" alt="">
+            </div>
+          </div>
+        </div>
+<!-- /END THE FEATURETTES -->
+
+
+<br><br>
+<!-- PLAN YOUR TRIP IMAGE GALLERY-->
+<div id="myCarousel" class="mb-6">
+
+  <div class="carousel-inner">
+    <div class="carousel-item activityBookImg active">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Plan your trip with us</h1>
+              <!-- Troggle button -->
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Instant book</button>
+        </div>
+      </div>
+    </div>
+</div>
+<!--END OF THE PLAN YOUR TRIP IMAGE GALLERY -->
+      
+
+<br><br>
+    <!-- ACTIVITIES -->
+    <div class="container">
+
+      <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading fw-normal lh-1">Swimming Pool<span class="text-body-secondary"></span></h2>
+              <p>Our Camp features a refreshing outdoor swimming pool, allowing guests to cool off and unwind amidst the serene natural surroundings during their luxurious glamping retreat.</p>
+              <p class="lead"><ul>
+                <ol><span class="tick-icon">&#10003;</span>Depth 3 feet</ol>
+                <ol><span class="tick-icon">&#10003;</span>Length 15 meters</ol>
+                <ol><span class="tick-icon">&#10003;</span>Width 7 meters</ol>
+              </ul></p>
+            </div>
+            <!-- image -->
+            <div class="col-md-5">
+               <img class="img-fluid" src="./assests/images/swimming-pool-activities.jpg" alt="">
+            </div>
+          </div>
+      
+          <hr>
+      
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading fw-normal lh-1">Mountain biking<span class="text-body-secondary"></span></h2>
+              <p>We arranges exhilarating mountain biking excursions through Bhutan's stunning landscapes, enabling guests to explore the region's rugged terrain and pristine natural beauty in an active and adventurous way.</p>
+              <p class="lead"><ul>
+                 <ol><span class="tick-icon">&#10003;</span>Day excursion to gasa hot spring</ol>
+                 <ol><span class="tick-icon">&#10003;</span>Day excursion Punakha valley </ol>
+                 <ol><span class="tick-icon">&#10003;</span>Day excursion Phochu valley(Male river)</ol>
+              </ul></p>
+            </div>
+            <!-- image -->
+            <div class="col-md-5 order-md-1">
+               <img class="img-fluid" src="./assests/images/bikers-man.jpg" alt="">
+            </div>
+          </div>
+          
+          <hr>
+      
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading fw-normal lh-1">Recreational Activities for kids<span class="text-body-secondary"></span></h2>
+              <p>We have a variety of supervised recreational activities to engage and entertain young guests, ensuring the whole family can enjoy a memorable glamping experience.</p>
+              <p class="lead"><ul>
+                <ol><span class="tick-icon">&#10003;</span>Volleyball</ol>
+                <ol><span class="tick-icon">&#10003;</span>Frisbees games </ol>
+                <ol><span class="tick-icon">&#10003;</span>Riverside sand beach games</ol>
+              </ul></p>
+            </div>
+            <!-- image -->
+            <div class="col-md-5">
+               <img class="img-fluid" src="./assests/images/recreational-kids.jpg" alt="">
+            </div>
+          </div>
+        </div>
+<!-- /END THE FEATURETTES -->
+
+<br><br>
+
+<!--Historic place-->
+<div class="popular-header p-3 pb-md-4 mx-auto text-center">
+  <h2>Visit historic place</h2>
+</div>
+
+<div class="container">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div id="headColor" class="card h-100">
+      <img src="./assests/images/khamsum-yulley.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Khamsum Yulley Chorten</h5>
+        <p class="card-text">A path leads from the roadside to a bridge across the Mo Chhu, before climbing steeply up to the chorten itself. Visit in the cool of the morning then sit to catch your breath and enjoy fabulous views up and down the lush Mo Chhu Valley...<span><a class="viewButton" href="https://www.heavenlybhutan.com/sightseeing-places-of-bhutan/places-to-visit-in-punakha/kabji-hoka-tsho/">View more</a></span> </p>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div id="headColor" class="card h-100">
+      <img src="./assests/images/hoka-tsho.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Hoka Tsho(Lake)</h5>
+        <p class="card-text"> This pristine lake is hidden away in the middle of dense jungle vegetation. There is a legend about a lake in Punakha that never overflows as it is continuously drained through an opening created by the deity residing in it...<span><a class="viewButton" href="https://www.heavenlybhutan.com/sightseeing-places-of-bhutan/places-to-visit-in-punakha/kabji-hoka-tsho/">View more</a></span> </p>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div id="headColor" class="card h-100">
+      <img src="./assests/images/punakha-dzong.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Punakha Dzong</h5>
+        <p class="card-text">The Punakha Dzong (the palace of great happiness or bliss), is the administrative centre of Punakha District in Punakha, Bhutan. The dzong was constructed by Ngawang Namgyal, in 1637–38. It is the second oldest... <span><a class="viewButton" href="http://www.punakha.gov.bt/en/tourism/punakha-dzong">View more</a></span></p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--END OF FACILITIES -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Where are you from?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="vstack gap-3">
+          <a class="link-offset-2 link-underline link-underline-opacity-0 text-body-emphasis" href="./local.html"><div class="p-2 methodColor"><h4>Local Resident</h4></div></a>
+          <a class="link-offset-2 link-underline link-underline-opacity-0 text-body-emphasis" href="./regional.html"><div class="p-2 methodColor"><h4>Regional Tourist</h4></div></a>
+          <a class="link-offset-2 link-underline link-underline-opacity-0 text-body-emphasis" href="./international.html"><div class="p-2 methodColor"><h4>International tourist</h4></div></a>
+        </div>
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!--==================================================-->
+	<!----- Start Footer Middle Area ----->
+	<!--==================================================-->
+	
+	<div id="footer"></div>
+
+	<!--==================================================-->
+	<!----- End Footer Middle Area ----->
+	<!--==================================================-->
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

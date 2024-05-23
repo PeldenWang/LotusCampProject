@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotus Camp Website Project</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+    
+
+ <!--==================================================-->
+	<!----- Start repeat navi footer Script----->
+	<!--==================================================-->
+
+	<script src="//code.jquery.com/jquery.min.js"></script>
+
+	<script type="text/javascript" >
+		//<!-- start navigation -->
+		$.get("navigation.html", function(data){
+			$("#navigation").replaceWith(data);
+		});
+
+		// <!-- start footer -->
+		$.get("footer.html", function(data){
+			$("#footer").replaceWith(data);
+		});
+		
+	</script>
+
+
+	<!--==================================================-->
+	<!----- End repeat navi footer Script----->
+	<!--==================================================-->
+
+  <!--==================================================-->
+	<!----- Start Navigation Area ----->
+	<!--==================================================-->
+	
+	<div id="navigation"></div>
+
+	<!--==================================================-->
+	<!----- End Navigation Area ----->
+	<!--==================================================-->
+
+
+<!-- BOOKING FORM -->
+<div class="py-5 text-center">
+    <h2>Regional tourist(Pay through google pay)</h2>
+  </div>
+
+<div class="container">      
+  <form class="row g-3">
+<div class="col-md-6">
+<label for="inputFirstName" class="form-label">First name</label>
+<input type="name" class="form-control" id="inputFirstName">
+</div>
+
+<div class="col-md-6">
+<label for="inputLastName" class="form-label">Last name</label>
+<input type="name" class="form-control" id="inputLastName">
+</div>
+
+<div class="col-12">
+<label for="phoneNumber" class="form-label">Phone Number</label>
+<input type="number" class="form-control" id="phoneNumber" placeholder="+975-12345678" required="Enter your phone number...">
+<div class="invalid-feedback">
+  Enter your phone number.
+</div>
+</div>
+
+<div class="col-12">
+<label for="nationality" class="form-label">Nationality</label>
+<input type="text" class="form-control" id="inputNationality" placeholder="Enter your country name here...">
+</div>
+
+<div class="col-12">
+<label for="email" class="form-label">Email<span class="text-body-secondary">(Optional)</span></label>
+<input type="email" class="form-control" id="email" placeholder="you@example.com">
+<div class="invalid-feedback">
+  Please enter a valid email address for shipping updates.
+</div>
+</div>
+
+
+ <!-- PAYMRNT FORM -->
+<div class="container">
+  <main>
+    
+    <div class="row g-5 my-3">
+      <!------ QR CODE SCAN -------->
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <img src="../assests/images/QR code.jpg" class="img-fluid rounded my-5 py-4" alt="..." width="340">
+      </div>
+      <!------ QR CODE SCAN -------->
+
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Scan & pay to book your camping</h4>
+        <form class="needs-validation" novalidate="">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="dateFrom" class="form-label">Check in</label>
+              <input type="Date" class="form-control" id="dateFrom" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Please select your date.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="dateTill" class="form-label">Check out</label>
+              <input type="Date" class="form-control" id="dateTill" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Please select your date.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="selection" class="form-label">Adults</label>
+              <select id="selection" class="form-select">
+                <option selected>One</option>
+                <option>Two</option>
+                <option>Three</option>
+                <option>Four</option>
+                <option>Five</option>
+                <option>More than six</option>
+              </select>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="selection" class="form-label">Children</label>
+              <select id="selection" class="form-select">
+                <option selected>Nill</option>
+                <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
+                <option>Four</option>
+                <option>Five</option>
+                <option>More than six</option>
+              </select>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="amount" class="form-label">Select amount</label>
+              <select id="inputAmount" class="form-select">
+                <option selected>INR.5,000/- 1 person</option>
+                <option>INR.10,000 - 2 person</option>
+                <option>INR.15,000 - 3 person</option>
+                <option>INR.20,000 - 4 person</option>
+                <option>INR.25,000 - 5 person</option>
+              </select>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="Transcation-number" class="form-label">Transcation number</label>
+              <input type="Number" class="form-control" id="transcationNumber" placeholder="" required="">
+              <div class="invalid-feedback">
+                Please enter your valid transcation number.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">If you have any message drop here<span class="text-body-secondary">(Optional)</span></label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>            
+
+          <button class="w-100 btn btn-lg" type="submit">Confirm Booking</button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Where are you from?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="vstack gap-3">
+          <a class="link-offset-2 link-underline link-underline-opacity-0 text-body-emphasis" href="./local.html"><div class="p-2 methodColor"><h4>Local Resident</h4></div></a>
+          <a class="link-offset-2 link-underline link-underline-opacity-0 text-body-emphasis" href="./regional.html"><div class="p-2 methodColor"><h4>Regional Tourist</h4></div></a>
+          <a class="link-offset-2 link-underline link-underline-opacity-0 text-body-emphasis" href="./international.html"><div class="p-2 methodColor"><h4>International tourist</h4></div></a>
+        </div>
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!--==================================================-->
+	<!----- Start Footer Middle Area ----->
+	<!--==================================================-->
+	
+	<div id="footer"></div>
+
+	<!--==================================================-->
+	<!----- End Footer Middle Area ----->
+	<!--==================================================-->
+
+
+</body>
+</html>

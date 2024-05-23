@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lotus Camp Website Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+
+
+   <!--==================================================-->
+	<!----- Start repeat navi footer Script----->
+	<!--==================================================-->
+
+	<script src="//code.jquery.com/jquery.min.js"></script>
+
+	<script type="text/javascript" >
+		//<!-- start navigation -->
+		$.get("navigation.html", function(data){
+			$("#navigation").replaceWith(data);
+		});
+
+		// <!-- start footer -->
+		$.get("footer.html", function(data){
+			$("#footer").replaceWith(data);
+		});
+		
+	</script>
+
+
+	<!--==================================================-->
+	<!----- End repeat navi footer Script----->
+	<!--==================================================-->
+
+  <!--==================================================-->
+	<!----- Start Navigation Area ----->
+	<!--==================================================-->
+	
+	<div id="navigation"></div>
+
+	<!--==================================================-->
+	<!----- End Navigation Area ----->
+	<!--==================================================-->
+
+<!-- SERVICES HEADER AND IMAGE -->
+<div id="myCarousel" class="mb-6">
+
+  <div class="carousel-inner">
+    <div class="carousel-item servicesSectionHead active">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Services</h1>
+          <p>Lotus Camp provides guests with a diverse range of premium services, including guided explorations, thrilling adventures, culinary excellence, and wellness offerings, elevating the glamping experience.</p>
+        </div>
+      </div>
+    </div>
+</div>
+<!--END OF THE SERVICES HEADER AND IMAGE -->
+
+
+<br>
+<!--SERVICES GALLERY-->
+<div class="services-header p-3 pb-md-4 mx-auto text-center">
+  <h2>We have extra services</h2>
+</div>
+
+<div class="container">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div id="headColor" class="card h-100">
+      <img src="./assests/images/organic-food.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Taste organic meals from
+          our kitchen</h5>
+        <p class="card-text">Enjoy the authentic Bhutanese organic food menu both buffet & ala-carte at our camp</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div id="headColor" class="card h-100">
+      <img src="./assests/images/organize-events.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Organize events with us</h5>
+        <p class="card-text">We provide luxurious spa services that help soothe your mind, body, and spirit amidst the serene natural surroundings, complementing the glamping experience.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div id="headColor" class="card h-100">
+      <img src="./assests/images/spa-massage.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Rejuvenate Spa Services</h5>
+        <p class="card-text">Our conference hall provides a serene and well-equipped space for meetings, seminars, or events, allowing guests to mix business and pleasure during their glamping retreat.. Capacity 40</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div id="headColor" class="card h-100">
+      <img src="./assests/images/pick-drop.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Pick and Drop Services</h5>
+        <p class="card-text">We offer airport pick & drop services according to your needs with luxury transport facilities.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div id="headColor" class="card h-100">
+      <img src="./assests/images/cooking-class.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Cooking Class</h5>
+        <p class="card-text">Hands-on cooking classes that teach guests to prepare authentic local cuisines, enabling them to savor the flavors of Bhutan and bring new culinary skills home.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div id="headColor" class="card h-100">
+      <img src="./assests/images/bird-watching.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Bird watching</h5>
+        <p class="card-text">Our scenic location provides excellent bird watching, allowing guests to spot diverse avian species and learn about the rich wildlife of Bhutan's natural surroundings.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--END OF THE SERVICES GALLERY-->
+
+
+<br>
+<!-- SAFETY & COMFORT -->
+        <div class="container">
+          <div class="safe-header p-3 pb-md-4 mx-auto text-center">
+            <h2>Your safety and comfort is our concern</h2>
+          </div>
+            <div class="offer-cards">
+                <div class="offer-card">
+                    <img id="offericon" src="./assests/icons/user-shield-icon.svg" alt="save">
+                    <p>Safe & secure location from predators</p>
+                </div>
+                <div class="offer-card">
+                    <img id="offericon" src="./assests/icons/first-aid-icon.svg" alt="firstadis">
+                    <h3></h3>
+                    <p>First aid at campsite.</p>
+                </div>
+                <div class="offer-card">
+                    <img id="offericon" src="./assests/icons/car-icon.svg" alt="Transport service">
+                    <h3></h3>
+                    <p>Comfort transport service</p>
+                </div>
+                <div class="offer-card">
+                    <img id="offericon" src="./assests/icons/rest-room-icon.svg" alt="restroom">
+                    <h3></h3>
+                    <p>Clean & comfort restroom </p>
+                </div>
+            </div>
+  </div>
+
+
+  <br><br>
+ <!-- PLAN YOUR TRIP IMAGE GALLERY-->
+<div id="myCarousel" class="mb-6">
+
+  <div class="carousel-inner">
+    <div class="carousel-item serviceBookImg active">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Plan your trip with us</h1>
+              <!-- Troggle button -->
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Instant book</button>
+        </div>
+      </div>
+    </div>
+</div>
+<!--END OF THE PLAN YOUR TRIP IMAGE GALLERY -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Where are you from?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="vstack gap-3">
+          <a class="link-offset-2 link-underline link-underline-opacity-0 text-body-emphasis" href="./local.html"><div class="p-2 methodColor"><h4>Local Resident</h4></div></a>
+          <a class="link-offset-2 link-underline link-underline-opacity-0 text-body-emphasis" href="./regional.html"><div class="p-2 methodColor"><h4>Regional Tourist</h4></div></a>
+          <a class="link-offset-2 link-underline link-underline-opacity-0 text-body-emphasis" href="./international.html"><div class="p-2 methodColor"><h4>International tourist</h4></div></a>
+        </div>
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!--==================================================-->
+	<!----- Start Footer Middle Area ----->
+	<!--==================================================-->
+	
+	<div id="footer"></div>
+
+	<!--==================================================-->
+	<!----- End Footer Middle Area ----->
+	<!--==================================================-->
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
