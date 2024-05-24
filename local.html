@@ -168,7 +168,7 @@
               <textarea class="form-control" id="bookMessage" rows="3"></textarea>
             </div>            
 
-          <button class="w-100 btn btn-lg" type="submit" onclick="sendToWhatsApp()">Confirm Booking</button>
+          <button class="w-100 btn btn-lg" type="submit">Confirm Booking</button>
         </form>
       </div>
     </div>
@@ -212,41 +212,58 @@
 	<!----- End Footer Middle Area ----->
 	<!--==================================================-->
 
-<script>
-  function sendToWhatsApp() {
-    var inputFirstName = document.getElementById('inputFirstName').value;
-    var inputLastName = document.getElementById('inputLastName').value;
-    var phoneNumber = document.getElementById('phoneNumber').value;
-    var inputNationality = document.getElementById('inputNationality').value;
-    var email = document.getElementById('email').value;
-    var checkIn = document.getElementById('checkIn').value;
-    var checkOut = document.getElementById('checkOut').value;
-    var selectionAdult = document.getElementById('selectionAdult').value;
-    var selectionChild = document.getElementById('selectionChild').value;
-    var inputAmount = document.getElementById('inputAmount').value;
-    var journalNumber = document.getElementById('journalNumber').value;
-    var bookMessage = document.getElementById('bookMessage').value;
 
-    var whatsappMessage = `Please fill out the following form:%0A%0A` +
-        `First Name: ${encodeURIComponent(inputFirstName)}%0A`
-        `Last Name: ${encodeURIComponent(inputLastName)}%0A` +
-        `Phone Number: ${encodeURIComponent(phoneNumbe)}%0A` +
-        `Nationality: ${encodeURIComponent(inputNationality)}%0A` +
-        `Email Address (optional): ${encodeURIComponent(email)}%0A` +
-        `Start Date: ${encodeURIComponent(checkIn)}%0A` +
-        `End Date: ${encodeURIComponent(checkOut)}%0A` +
-        `No. of Adults: ${encodeURIComponent(selectionAdult)}%0A` +
-        `No. of Children: ${encodeURIComponent(selectionChild)}%0A` +
-        `Selected Amount: ${encodeURIComponent(inputAmount)}%0A` +
-        `Journal Number: ${encodeURIComponent(journalNumber)}%0A` +
-        `Message (Optional): ${encodeURIComponent(bookMessage)}`;
 
-    var phone = "97517898345";
-    var whatsappURL = `https://wa.me/97517898345?text=${whatsappMessage}`;
+ 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('form');
+    
+      form.addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent the form from submitting normally
+    
+          // Get form data
+          const firstName = document.getElementById('inputFirstName').value;
+          const lastName = document.getElementById('inputLastName').value;
+          const phoneNumber = document.getElementById('phoneNumber').value;
+          const inputNationality = document.getElementById('inputNationality').value;
+          const email = document.getElementById('email').value;
+          const checkIn = document.getElementById('checkIn').value;
+          const checkOut = document.getElementById('checkOut').value;
+          const selectionAdult = document.getElementById('selectionAdult').value;
+          const selectionChild = document.getElementById('selectionChild').value;
+          const inputAmount = document.getElementById('inputAmount').value;
+          const journalNumber = document.getElementById('journalNumber').value;
+          const bookMessage = document.getElementById('bookMessage').value;
+    
+          // Construct the WhatsApp message with the form details
+          const whatsappMessage = `
+              Booking Details:
+              Name: ${firstName} ${lastName}
+              Phone Number: ${phoneNumber}
+              Nationality: ${inputNationality}
+              Email: ${email}
+              Check-In Date: ${checkIn}
+              Check-Out Date: ${checkOut}
+              Adults: ${selectionAdult}
+              Children: ${selectionChild}
+              Amount: ${inputAmount}
+              Transaction Number: ${journalNumber}
+              Message: ${bookMessage}
+          `;
+    
+          // Generate a WhatsApp link with the message
+          const phoneNumberOwner = '97517898345'; // Replace with the owner's phone number
+          const whatsappURL = `https://wa.me/${97517898345}?text=${encodeURIComponent(whatsappMessage)}`;
+    
+          // Redirect the user to the generated WhatsApp link
+          window.open(whatsappURL, '_blank');
+      });
+    });
+    </script>
 
-    window.open(whatsappURL, '_blank');
-}
-</script>
+
+
 
 </body>
 </html>
