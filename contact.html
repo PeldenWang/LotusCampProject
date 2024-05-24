@@ -105,7 +105,7 @@
                  <a href="https://wa.me/97517355457"><img src="./assests/icons/whatsapp.svg" alt="" width="30"></a>
                  <img src="./assests/icons/telegram.svg" alt="" width="30">
                  <a href="https://www.facebook.com/crp021"><img src="./assests/icons/facebook.svg" alt="" width="30"></a>
-                 <img src="./assests/icons/instagram.svg" alt="" width="30">
+                 <a href="https://www.instagram.com/thelotuscamp?igsh=MXF1NDhhOHF3eWg5OA=="><img src="./assests/icons/instagram.svg" alt="" width="30"></a>
                 </li>
               </ul>
             </div>
@@ -169,7 +169,7 @@
                     <textarea class="form-control" id="message" rows="3"></textarea>
                   </div> 
     
-                <button class="btn" type="submit" onclick="sendToWhatsApp()">Send to Whatsapp</button>
+                <button class="btn" type="submit">Send to Whatsapp</button>
               </form>
             </div>
           </div>
@@ -196,7 +196,7 @@
                       Is electricity available in tents?
                     </button>
                   </h4>
-                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                       There is no light in the tents, however our camp site is brightened all night with street lights.
                     </div>
@@ -208,7 +208,7 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                       What are the rules and regulations regarding waste disposal at camping sites?</button>
                   </h4>
-                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                       Visitors are expected to follow Leave No Trace principles and properly dispose of waste at designated areas.
                     </div>
@@ -220,7 +220,7 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                     What is the cancellation policy for campsite reservations?</button>
                   </h4>
-                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                       We have a flexible cancellation policy. If you need to cancel your reservation, please notify us at least 48 hours in advance to receive a full refund. Cancellations made within 48 hours of the reservation start date may be subject to a cancellation fee. Refer to our website or reservation confirmation email for detailed cancellation policy information.
                     </div>
@@ -271,9 +271,11 @@
 	<!----- End Footer Middle Area ----->
 	<!--==================================================-->
 
+
+
   <script>
     function sendToWhatsApp() {
-        // Get form data
+        // Gather form data
         var firstName = document.getElementById('firstName').value;
         var lastName = document.getElementById('lastName').value;
         var phoneNumber = document.getElementById('phoneNumber').value;
@@ -281,25 +283,48 @@
         var subject = document.getElementById('subject').value;
         var message = document.getElementById('message').value;
 
+        // Validation check
+        if (!firstName || !lastName || !phoneNumber || !subject) {
+            alert("Please fill in all required fields.");
+            return;
+        }
+
         // Construct the message
-        var whatsappMessage = `Please fill out the following form:%0A%0A` +
-            `First Name: ${encodeURIComponent(firstName)}%0A` +
-            `Last Name: ${encodeURIComponent(lastName)}%0A` +
-            `Phone Number: ${encodeURIComponent(phoneNumber)}%0A` +
-            `Email Address (Optional): ${encodeURIComponent(email)}%0A` +
-            `Select Subject: ${encodeURIComponent(subject)}%0A` +
-            `Write your message here: ${encodeURIComponent(message)}`;
+        var whatsappMessage = `Hello, my name is ${firstName} ${lastName}.%0APhone: ${phoneNumber}.%0AEmail: ${email}.%0ASubject: ${subject}.%0AMessage: ${message}`;
 
-        // WhatsApp number to send the message to (replace with your number)
-        var phone = "97517898345"; // Replace with your WhatsApp phone number in international format, e.g., "1234567890"
+        // WhatsApp URL
+        var whatsappUrl = `https://api.whatsapp.com/send?phone=97517898345&text=${encodeURIComponent(whatsappMessage)}`;
 
-        // Construct the WhatsApp URL
-        var whatsappURL = `https://wa.me/97517898345?text=${whatsappMessage}`;
-
-        // Open the WhatsApp URL
-        window.open(whatsappURL, '_blank');
+        // Open WhatsApp URL
+        window.open(whatsappUrl, '_blank');
     }
+
+    // Form validation
+    (function () {
+        'use strict';
+
+        window.addEventListener('load', function () {
+            // Get the forms we want to add validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        event.preventDefault(); // Prevent default form submission
+                        sendToWhatsApp(); // Call the sendToWhatsApp function
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
 </script>
+
+
 
 </body>
 </html>
