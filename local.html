@@ -51,8 +51,8 @@
 
 <!-- BOOKING FORM -->
     <div class="py-5 text-center">
-        <h2>Local resident</h2>
-      </div>
+      <h2>Local resident</h2>
+    </div>
 
 <div class="container">      
       <form class="row g-3">
@@ -100,7 +100,7 @@
       <!------ QR CODE SCAN -------->
 
       <div class="col-md-7 col-lg-8">
-        <h4 class="mb-3">Scan & pay to book your camping</h4>
+        <h2 class="mb-3">Scan & pay to book your camping</h2>
         <form class="needs-validation" novalidate="">
           <div class="row g-3">
             <div class="col-sm-6">
@@ -120,44 +120,34 @@
             </div>
 
             <div class="col-sm-6">
-              <label for="selection" class="form-label">Adults</label>
+              <label for="selection" class="form-label">Adults(With Price)</label>
               <select id="selectionAdult" class="form-select">
-                <option selected>One</option>
-                <option>Two</option>
-                <option>Three</option>
-                <option>Four</option>
-                <option>Five</option>
+                <option selected>One - Nu.3,000/-</option>
+                <option>Two - Nu.6,000/-</option>
+                <option>Three - Nu.9,000/-</option>
+                <option>Four - Nu.12,000/-</option>
+                <option>Five - Nu.15,000/-</option>
                 <option>If more than six please contact us</option>
               </select>
             </div>
 
             <div class="col-sm-6">
-              <label for="selection" class="form-label">Children</label>
+              <label for="selection" class="form-label">Children(Age below 5 free)</label>
               <select id="selectionChild" class="form-select">
-                <option selected>Nill</option>
-                <option>One</option>
-                <option>Two</option>
-                <option>Three</option>
-                <option>Four</option>
-                <option>Five</option>
+                <option selected>Nil</option>
+                <option>One - Nu.1,500/-</option>
+                <option>Two - Nu.3,000/-</option>
+                <option>Three - Nu.4,500/-</option>
+                <option>Four - Nu.6,000/-</option>
+                <option>Five - Nu.7,500/-</option>
                 <option>If more than six please contact us</option>
               </select>
             </div>
 
-            <div class="col-sm-6">
-              <label for="amount" class="form-label">Select amount</label>
-              <select id="inputAmount" class="form-select">
-                <option selected>Nu.3,000 - 1 person</option>
-                <option>Nu.6,000 - 2 person</option>
-                <option>Nu.9,000 - 3 person</option>
-                <option>Nu.12,000 - 4 person</option>
-                <option>Nu.15,000 - 5 person</option>
-              </select>
-            </div>
 
-            <div class="col-sm-6">
+            <div class="col-sm-12">
               <label for="Journal-number" class="form-label">Journal number</label>
-              <input type="Number" class="form-control" id="journalNumber" placeholder="" required="">
+              <input type="Number" class="form-control" id="journalNumber" placeholder="Enter valid journal number " required="">
               <div class="invalid-feedback">
                 Please enter your valid journal number.
               </div>
@@ -168,7 +158,7 @@
               <textarea class="form-control" id="bookMessage" rows="3"></textarea>
             </div>            
 
-          <button class="w-100 btn btn-lg" type="submit">Confirm Booking</button>
+          <button class="w-100 btn btn-lg" type="submit">Confirm booking via whatsapp</button>
         </form>
       </div>
     </div>

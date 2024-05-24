@@ -22,6 +22,7 @@ body, html {
 /* HEADING 2 */
 h2 {
     color: #44633F;
+    font-weight: 600;
 }
 
 
@@ -36,6 +37,7 @@ h2 {
 
 .btn:hover {
     background-color: #44633F;
+    color: white;
 }
 
 .viewButton {
@@ -60,11 +62,11 @@ h2 {
 }
 
 .homeSlide2_img{
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./assests/images/briefing-hero.jpg");
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./assests/images/main-punakha-dzong.jpg");
 }
 
 .homeSlide3_img{
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("./assests/images/swimmingpool-hero.jpg");
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("./assests/images/briefing-hero.jpg");
 }
 
 .carousel-caption{
@@ -87,7 +89,7 @@ h2 {
 }
 
 .otherSlide3_img{
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("./assests/images/meals-outside.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./assests/images/meals-outside.jpg");
 }
 /*END OF THE OTHER SLIDE IMAGE */
 
@@ -118,11 +120,11 @@ h2 {
 
 /* NAV IMAGE AND HEAD TEXT */
 .aboutSectionHead{
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./assests/images/about-us.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./assests/images/about-group.jpg");
 }
 
 .servicesSectionHead{
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./assests/images/services.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./assests/images/services-pool.jpg");
 }
 
 .activitySectionHead{
@@ -140,7 +142,7 @@ h2 {
 
 /* METHOD */
 .methodColor {
-    background-color:   #44633F;
+    background-color:#44633F;
     color: white;
     border-radius: 6px;
 }
@@ -271,7 +273,7 @@ h2 {
 
 
 
-  /* activites coures caption  */
+  /* ACTIVITIES SECTION */
   .featurette img {
     flex: 0 0 auto;
    height: auto;
