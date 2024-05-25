@@ -168,7 +168,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade mt-5" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -206,54 +206,53 @@
 
 
 
-
- 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.querySelector('form');
-    
-      form.addEventListener('submit', function(event) {
-          event.preventDefault(); // Prevent the form from submitting normally
-    
-          // Get form data
-          const firstName = document.getElementById('inputFirstName').value;
-          const lastName = document.getElementById('inputLastName').value;
-          const phoneNumber = document.getElementById('phoneNumber').value;
-          const inputNationality = document.getElementById('inputNationality').value;
-          const email = document.getElementById('email').value;
-          const checkIn = document.getElementById('checkIn').value;
-          const checkOut = document.getElementById('checkOut').value;
-          const selectionAdult = document.getElementById('selectionAdult').value;
-          const selectionChild = document.getElementById('selectionChild').value;
-          const inputAmount = document.getElementById('inputAmount').value;
-          const journalNumber = document.getElementById('journalNumber').value;
-          const bookMessage = document.getElementById('bookMessage').value;
-    
-          // Construct the WhatsApp message with the form details
-          const whatsappMessage = `
-              Booking Details:
-              Name: ${firstName} ${lastName}
-              Phone Number: ${phoneNumber}
-              Nationality: ${inputNationality}
-              Email: ${email}
-              Check-In Date: ${checkIn}
-              Check-Out Date: ${checkOut}
-              Adults: ${selectionAdult}
-              Children: ${selectionChild}
-              Amount: ${inputAmount}
-              Transaction Number: ${journalNumber}
-              Message: ${bookMessage}
-          `;
-    
-          // Generate a WhatsApp link with the message
-          const phoneNumberOwner = '97517898345'; // Replace with the owner's phone number
-          const whatsappURL = `https://wa.me/${97517898345}?text=${encodeURIComponent(whatsappMessage)}`;
-    
-          // Redirect the user to the generated WhatsApp link
-          window.open(whatsappURL, '_blank');
-      });
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Form validation
+      let form = event.target;
+      if (!form.checkValidity()) {
+        event.stopPropagation();
+        form.classList.add('was-validated');
+        return;
+      }
+
+      // Get form data
+      let firstName = document.getElementById('inputFirstName').value;
+      let lastName = document.getElementById('inputLastName').value;
+      let phoneNumber = document.getElementById('phoneNumber').value;
+      let nationality = document.getElementById('inputNationality').value;
+      let email = document.getElementById('email').value;
+      let checkIn = document.getElementById('checkIn').value;
+      let checkOut = document.getElementById('checkOut').value;
+      let selectionAdult = document.getElementById('selectionAdult').value;
+      let selectionChild = document.getElementById('selectionChild').value;
+      let journalNumber = document.getElementById('journalNumber').value;
+      let bookMessage = document.getElementById('bookMessage').value;
+
+      // Format the WhatsApp message
+      let whatsappMessage = `Hello, I would like to book a camping site.%0A` +
+                            `Name: ${firstName} ${lastName}%0A` +
+                            `Phone Number: ${phoneNumber}%0A` +
+                            `Nationality: ${nationality}%0A` +
+                            `Email: ${email}%0A` +
+                            `Check In: ${checkIn}%0A` +
+                            `Check Out: ${checkOut}%0A` +
+                            `Adults: ${selectionAdult}%0A` +
+                            `Children: ${selectionChild}%0A` +
+                            `Journal Number: ${journalNumber}%0A` +
+                            `Message: ${bookMessage}`;
+
+      // WhatsApp URL
+      let whatsappURL = `https://wa.me/97517898345?text=${whatsappMessage}`;
+
+      // Open WhatsApp
+      window.open(whatsappURL, '_blank');
     });
-    </script>
+  </script>
+    
+
 
 
 

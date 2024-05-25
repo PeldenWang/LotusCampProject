@@ -79,6 +79,7 @@
                 <span class="my-3">Contact Information</span>
               </h4>
               <ul class="list-group mb-3">
+
                 <li class="list-group-item d-flex justify-content-between lh-sm">
                   <div>
                     <h6 class="my-2">Phone number</h6>
@@ -86,6 +87,7 @@
                   </div>
                  <img src="./assests/icons/phonecall.svg" alt="" width="20">
                 </li>
+
                 <li class="list-group-item d-flex justify-content-between lh-sm">
                   <div>
                     <h6 class="my-2">Email address</h6>
@@ -93,12 +95,21 @@
                   </div>
                   <img src="./assests/icons/email.svg" alt="" width="20">
                 </li>
+
                 <li class="list-group-item d-flex justify-content-between lh-sm">
                   <div>
-                    <h6 class="my-2">Address</h6>
+                    <h6 class="my-2">Business address</h6>
                     <small class="text-body-secondary">Lhakhu, Punakha</small>
                   </div>
                   <img src="./assests/icons/location.svg" alt="" width="20">
+                </li>
+
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                  <div>
+                    <h6 class="my-2">Postal code</h6>
+                    <small class="text-body-secondary">13001</small>
+                  </div>
+                  <img src="./assests/icons/postal-code.svg" alt="" width="20">
                 </li>
                 
                 <li class="my-2 list-group-item d-flex justify-content-between">
@@ -198,7 +209,7 @@
                   </h4>
                   <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      There is no light in the tents, however our camp site is brightened all night with street lights.
+                      There is no light in the tents, however our camp site is brightened all night with streetlights.
                     </div>
                   </div>
                 </div>
@@ -237,7 +248,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade mt-5" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -273,7 +284,48 @@
 
 
 
+
+
   <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Form validation
+      let form = event.target;
+      if (!form.checkValidity()) {
+        event.stopPropagation();
+        form.classList.add('was-validated');
+        return;
+      }
+
+      // Get form data
+      let firstName = document.getElementById('firstName').value;
+      let lastName = document.getElementById('lastName').value;
+      let phoneNumber = document.getElementById('phoneNumber').value;
+      let email = document.getElementById('email').value;
+      let subject = document.getElementById('subject').value;
+      let message = document.getElementById('message').value;
+
+      // Format the WhatsApp message
+      let whatsappMessage = `Hello, my name is ${firstName} ${lastName}.%0A` +
+                            `Phone number: ${phoneNumber}%0A` +
+                            `Email: ${email}%0A` +
+                            `Subject: ${subject}%0A` +
+                            `Message: ${message}`;
+
+      // WhatsApp URL
+      let whatsappURL = `https://wa.me/97517898345?text=${whatsappMessage}`;
+
+      // Open WhatsApp
+      window.open(whatsappURL, '_blank');
+    });
+  </script>
+
+
+
+
+
+  <!-- <script>
     function sendToWhatsApp() {
         // Gather form data
         var firstName = document.getElementById('firstName').value;
@@ -322,7 +374,7 @@
             });
         }, false);
     })();
-</script>
+</script> -->
 
 
 
