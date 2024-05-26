@@ -286,71 +286,63 @@
 
 
 
-  <!-- <script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      // Form validation
-      let form = event.target;
-      if (!form.checkValidity()) {
-        event.stopPropagation();
-        form.classList.add('was-validated');
-        return;
-      }
-
-      // Get form data
-      let firstName = document.getElementById('firstName').value;
-      let lastName = document.getElementById('lastName').value;
-      let phoneNumber = document.getElementById('phoneNumber').value;
-      let email = document.getElementById('email').value;
-      let subject = document.getElementById('subject').value;
-      let message = document.getElementById('message').value;
-
-      // Format the WhatsApp message
-      let whatsappMessage = `Hello, my name is ${firstName} ${lastName}.%0A` +
-                            `Phone number: ${phoneNumber}%0A` +
-                            `Email: ${email}%0A` +
-                            `Subject: ${subject}%0A` +
-                            `Message: ${message}`;
-
-      // WhatsApp URL
-      let whatsappURL = `https://wa.me/97517898345?text=${whatsappMessage}`;
-
-      // Open WhatsApp
-      window.open(whatsappURL, '_blank');
-    });
-  </script> -->
-
-
-
-
-
   <script>
     function sendToWhatsApp() {
-      // Replace "YOUR_WHATSAPP_NUMBER" with the owner's number
-      const ownerNumber = "97517898345";
-  
-      // Get user data from the form
-      const firstName = document.getElementById("firstName").value;
-      const lastName = document.getElementById("lastName").value;
-      const phoneNumber = document.getElementById("phoneNumber").value;
-      const email = document.getElementById("email").value;
-      const subject = document.getElementById("subject").value;
-      const message = document.getElementById("message").value;
-  
-      // Encode form data using URL encoding
-      const encodedData = `firstName=${encodeURIComponent(firstName)}&lastName=${encodeURIComponent(lastName)}&phoneNumber=${encodeURIComponent(phoneNumber)}&email=${encodeURIComponent(email)}&subject=${encodeURIComponent(subject)}&message=${encodeURIComponent(message)}`;
-  
-      // Create the WhatsApp link with pre-filled message
-      const whatsAppUrl = `https://wa.me/${97517898345}?text=${encodedData}`;
-  
-      // Open the link in a new browser tab
-      window.open(whatsAppUrl, '_blank');
+        // Gather form data
+        var firstName = document.getElementById('firstName').value;
+        var lastName = document.getElementById('lastName').value;
+        var phoneNumber = document.getElementById('phoneNumber').value;
+        var email = document.getElementById('email').value;
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value;
+
+        // Validation check
+        if (!firstName || !lastName || !phoneNumber || !subject) {
+            alert("Please fill in all required fields.");
+            return;
+        }
+
+        // Construct the message
+        var whatsappMessage = `Hello, my name is ${firstName} ${lastName} 
+        Phone: ${phoneNumber} 
+        Email: ${email} 
+        Subject: ${subject} 
+        Message: ${message}`;
+
+        // WhatsApp URL
+        var whatsappUrl = `https://api.whatsapp.com/send?phone=97517898345&text=${encodeURIComponent(whatsappMessage)}`;
+
+        // Open WhatsApp URL
+        window.open(whatsappUrl, '_blank');
     }
-  
-    const submitButton = document.querySelector("button[type='submit'");
-    submitButton.addEventListener("click", sendToWhatsApp);
-  </script>
+
+    // Form validation
+    (function () {
+        'use strict';
+
+        window.addEventListener('load', function () {
+            // Get the forms we want to add validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        event.preventDefault(); // Prevent default form submission
+                        sendToWhatsApp(); // Call the sendToWhatsApp function
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+
+
+
 
 
 

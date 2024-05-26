@@ -57,13 +57,13 @@
 <div class="container">      
       <form class="row g-3">
   <div class="col-md-6">
-    <label for="inputFirstName" class="form-label">First name</label>
-    <input type="name" class="form-control" id="inputFirstName">
+    <label for="firstName" class="form-label">First name</label>
+    <input type="name" class="form-control" id="firstName">
   </div>
   
   <div class="col-md-6">
-    <label for="inputLastName" class="form-label">Last name</label>
-    <input type="name" class="form-control" id="inputLastName">
+    <label for="lastName" class="form-label">Last name</label>
+    <input type="name" class="form-control" id="lastName">
   </div>
 
   <div class="col-12">
@@ -76,7 +76,7 @@
 
   <div class="col-12">
     <label for="nationality" class="form-label">Nationality</label>
-    <input type="text" class="form-control" id="inputNationality" placeholder="Enter your country name here...">
+    <input type="text" class="form-control" id="nationality" placeholder="Enter your country name here...">
   </div>
 
   <div class="col-12">
@@ -104,7 +104,7 @@
         <form class="needs-validation" novalidate="">
           <div class="row g-3">
             <div class="col-sm-6">
-              <label for="dateFrom" class="form-label">Check in</label>
+              <label for="checkIn" class="form-label">Check in</label>
               <input type="Date" class="form-control" id="checkIn" placeholder="" value="" required="">
               <div class="invalid-feedback">
                 Please select your date.
@@ -112,7 +112,7 @@
             </div>
 
             <div class="col-sm-6">
-              <label for="dateTill" class="form-label">Check out</label>
+              <label for="checkOut" class="form-label">Check out</label>
               <input type="Date" class="form-control" id="checkOut" placeholder="" value="" required="">
               <div class="invalid-feedback">
                 Please select your date.
@@ -120,7 +120,7 @@
             </div>
 
             <div class="col-sm-6">
-              <label for="selection" class="form-label">Adults(With Price)</label>
+              <label for="selectionAdult" class="form-label">Adults(With Price)</label>
               <select id="selectionAdult" class="form-select">
                 <option selected>One - Nu.3,000/-</option>
                 <option>Two - Nu.6,000/-</option>
@@ -132,7 +132,7 @@
             </div>
 
             <div class="col-sm-6">
-              <label for="selection" class="form-label">Children(Age below 5 free)</label>
+              <label for="selectionChild" class="form-label">Children(Age below 5 free)</label>
               <select id="selectionChild" class="form-select">
                 <option selected>Nil</option>
                 <option>One - Nu.1,500/-</option>
@@ -146,7 +146,7 @@
 
 
             <div class="col-sm-12">
-              <label for="Journal-number" class="form-label">Journal number</label>
+              <label for="JournalNumber" class="form-label">Journal number</label>
               <input type="Number" class="form-control" id="journalNumber" placeholder="Enter valid journal number " required="">
               <div class="invalid-feedback">
                 Please enter your valid journal number.
@@ -154,7 +154,7 @@
             </div>
 
             <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label">If you have any message drop here<span class="text-body-secondary">(Optional)</span></label>
+              <label for="bookMessage" class="form-label">If you have any message drop here<span class="text-body-secondary">(Optional)</span></label>
               <textarea class="form-control" id="bookMessage" rows="3"></textarea>
             </div>            
 
@@ -206,7 +206,77 @@
 
 
 
+
   <script>
+    function sendToWhatsApp() {
+        // Gather form data
+        var firstName = document.getElementById('firstName').value;
+        var lastName = document.getElementById('lastName').value;
+        var phoneNumber = document.getElementById('phoneNumber').value;
+        var nationality = document.getElementById('nationality').value;
+        var email = document.getElementById('email').value;
+        var checkIn = document.getElementById('checkIn').value;
+        var checkOut = document.getElementById('checkOut').value;
+        var selectionAdult = document.getElementById('selectionAdult').value;
+        var selectionChild = document.getElementById('selectionChild').value;
+        var journalNumber = document.getElementById('journalNumber').value;
+        var bookMessage = document.getElementById('bookMessage').value;
+
+        // Validation check
+        if (!firstName || !lastName || !phoneNumber || !nationality || !checkIn || !checkOut || !selectionAdult || !selectionChild || !journalNumber ) {
+            alert("Please fill in all required fields.");
+            return;
+        }
+
+        // Construct the message
+        var whatsappMessage = `Name: ${firstName} ${lastName} 
+        Phone: ${phoneNumber} 
+        Nationality: ${nationality} 
+        Email address: ${email}
+        Booking from: ${checkIn}
+        Bookuing till: ${checkOut}
+        Number of adults: ${selectionAdult}
+        Number of children: ${selectionChild}
+        Journal Number: ${journalNumber}
+        Message: ${ bookMessage}`;
+
+        // WhatsApp URL
+        var whatsappUrl = `https://api.whatsapp.com/send?phone=97517898345&text=${encodeURIComponent(whatsappMessage)}`;
+
+        // Open WhatsApp URL
+        window.open(whatsappUrl, '_blank');
+    }
+
+    // Form validation
+    (function () {
+        'use strict';
+
+        window.addEventListener('load', function () {
+            // Get the forms we want to add validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        event.preventDefault(); // Prevent default form submission
+                        sendToWhatsApp(); // Call the sendToWhatsApp function
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+
+
+
+
+
+  <!-- <script>
     document.getElementById('bookingForm').addEventListener('submit', function(event) {
       event.preventDefault();
 
@@ -250,7 +320,7 @@
       // Open WhatsApp
       window.open(whatsappURL, '_blank');
     });
-  </script>
+  </script> -->
     
 
 
