@@ -68,9 +68,9 @@
       </div>
 <!--END OF THE CONTACT US HEADING AND IMAGE -->
 
-<br><br>
+
 <!--CONTACT FORMS -->
-      <div class="container">
+      <div class="container mt-5">
         <main>
       
           <div class="row g-5">
@@ -188,9 +188,9 @@
 
         
 
-<br>
+
         <!-- FREQUIENTLY AKED QUESTIONS -->
-        <article class="my-3" id="accordion">
+        <article class="mt-4" id="accordion">
           
             <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
                 <h2>Frequently Asked Questions</h2>
@@ -303,11 +303,11 @@
         }
 
         // Construct the message
-        var whatsappMessage = `Hello, my name is ${firstName} ${lastName} 
-        Phone: ${phoneNumber} 
-        Email: ${email} 
-        Subject: ${subject} 
-        Message: ${message}`;
+        var whatsappMessage = `*Hello, my name is* ${firstName} ${lastName}\n
+        *Phone:* ${phoneNumber}\n
+        *Email:* ${email}\n
+        *Subject:* ${subject}\n
+        *Message:* ${message}`;
 
         // WhatsApp URL
         var whatsappUrl = `https://api.whatsapp.com/send?phone=97517898345&text=${encodeURIComponent(whatsappMessage)}`;

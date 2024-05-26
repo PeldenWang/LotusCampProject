@@ -50,8 +50,8 @@
 
 
 <!-- BOOKING FORM -->
-    <div class="py-5 text-center">
-      <h2>Local resident</h2>
+    <div class="mt-5 text-center">
+      <h2>Local resident(Pay through local banks)</h2>
     </div>
 
 <div class="container">      
@@ -88,6 +88,19 @@
   </div>
 
 
+
+
+  <!-- ARE YOU STUCK HERE -->
+  <div class="mt-4 text-center">
+    <h2>Are you stuck here?</h2>
+    <p>If you have any doubts in booking please contact us for more in formation</p>
+    <div class="getInTouch"><p><a class="btn btn-lg" href="./contact.html">Contact Us</a></p></div>
+  </div>
+  <!--END OF THE ARE YOU STUCK HERE -->
+
+  
+
+
 <!-- PAYMRNT FORM -->
 <div class="container">
   <main>
@@ -120,8 +133,8 @@
             </div>
 
             <div class="col-sm-6">
-              <label for="selectionAdult" class="form-label">Adults(With Price)</label>
-              <select id="selectionAdult" class="form-select">
+              <label for="selectionAdults" class="form-label">Adults(With Price)</label>
+              <select id="selectionAdults" class="form-select">
                 <option selected>One - Nu.3,000/-</option>
                 <option>Two - Nu.6,000/-</option>
                 <option>Three - Nu.9,000/-</option>
@@ -158,7 +171,7 @@
               <textarea class="form-control" id="bookMessage" rows="3"></textarea>
             </div>            
 
-          <button class="w-100 btn btn-lg" type="submit">Confirm booking via whatsapp</button>
+            <button class="w-100 btn btn-lg" type="submit" onclick="generateWhatsAppLink()">Confirm booking via whatsapp</button>
         </form>
       </div>
     </div>
@@ -207,120 +220,38 @@
 
 
 
-  <script>
-    function sendToWhatsApp() {
-        // Gather form data
-        var firstName = document.getElementById('firstName').value;
-        var lastName = document.getElementById('lastName').value;
-        var phoneNumber = document.getElementById('phoneNumber').value;
-        var nationality = document.getElementById('nationality').value;
-        var email = document.getElementById('email').value;
-        var checkIn = document.getElementById('checkIn').value;
-        var checkOut = document.getElementById('checkOut').value;
-        var selectionAdult = document.getElementById('selectionAdult').value;
-        var selectionChild = document.getElementById('selectionChild').value;
-        var journalNumber = document.getElementById('journalNumber').value;
-        var bookMessage = document.getElementById('bookMessage').value;
+<script>
+  function generateWhatsAppLink() {
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const phoneNumber = document.getElementById('phoneNumber').value;
+    const nationality = document.getElementById('nationality').value;
+    const email = document.getElementById('email').value;
+    const checkIn = document.getElementById('checkIn').value;
+    const checkOut = document.getElementById('checkOut').value;
+    const adults = document.getElementById('selectionAdults').value;
+    const children = document.getElementById('selectionChild').value;
+    const journalNumber = document.getElementById('journalNumber').value;
+    const message = document.getElementById('bookMessage').value;
 
-        // Validation check
-        if (!firstName || !lastName || !phoneNumber || !nationality || !checkIn || !checkOut || !selectionAdult || !selectionChild || !journalNumber ) {
-            alert("Please fill in all required fields.");
-            return;
-        }
+    const ownerNumber = '97517898345'; // Replace with the owner's WhatsApp number
+    const url = `https://wa.me/${97517898345}?text=${encodeURIComponent(
+      `*Booking Details*\n
+      *Name:* ${firstName} ${lastName}\n
+      *Phone:* ${phoneNumber}\n
+      *Nationality:* ${nationality}\n
+      *Email:* ${email}\n
+      *Check-In Date:* ${checkIn}\n
+      *Check-Out Date:* ${checkOut}\n
+      *Adults:* ${adults}\n
+      *Children:* ${children}\n
+      *Journal Number:* ${journalNumber}\n
+      *Message:* ${message}`
+    )}`;
 
-        // Construct the message
-        var whatsappMessage = `Name: ${firstName} ${lastName} 
-        Phone: ${phoneNumber} 
-        Nationality: ${nationality} 
-        Email address: ${email}
-        Booking from: ${checkIn}
-        Bookuing till: ${checkOut}
-        Number of adults: ${selectionAdult}
-        Number of children: ${selectionChild}
-        Journal Number: ${journalNumber}
-        Message: ${ bookMessage}`;
-
-        // WhatsApp URL
-        var whatsappUrl = `https://api.whatsapp.com/send?phone=97517898345&text=${encodeURIComponent(whatsappMessage)}`;
-
-        // Open WhatsApp URL
-        window.open(whatsappUrl, '_blank');
-    }
-
-    // Form validation
-    (function () {
-        'use strict';
-
-        window.addEventListener('load', function () {
-            // Get the forms we want to add validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    } else {
-                        event.preventDefault(); // Prevent default form submission
-                        sendToWhatsApp(); // Call the sendToWhatsApp function
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
+    window.open(url, '_blank');
+  }
 </script>
-
-
-
-
-
-  <!-- <script>
-    document.getElementById('bookingForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      // Form validation
-      let form = event.target;
-      if (!form.checkValidity()) {
-        event.stopPropagation();
-        form.classList.add('was-validated');
-        return;
-      }
-
-      // Get form data
-      let firstName = document.getElementById('inputFirstName').value;
-      let lastName = document.getElementById('inputLastName').value;
-      let phoneNumber = document.getElementById('phoneNumber').value;
-      let nationality = document.getElementById('inputNationality').value;
-      let email = document.getElementById('email').value;
-      let checkIn = document.getElementById('checkIn').value;
-      let checkOut = document.getElementById('checkOut').value;
-      let selectionAdult = document.getElementById('selectionAdult').value;
-      let selectionChild = document.getElementById('selectionChild').value;
-      let journalNumber = document.getElementById('journalNumber').value;
-      let bookMessage = document.getElementById('bookMessage').value;
-
-      // Format the WhatsApp message
-      let whatsappMessage = `Hello, I would like to book a camping site.%0A` +
-                            `Name: ${firstName} ${lastName}%0A` +
-                            `Phone Number: ${phoneNumber}%0A` +
-                            `Nationality: ${nationality}%0A` +
-                            `Email: ${email}%0A` +
-                            `Check In: ${checkIn}%0A` +
-                            `Check Out: ${checkOut}%0A` +
-                            `Adults: ${selectionAdult}%0A` +
-                            `Children: ${selectionChild}%0A` +
-                            `Journal Number: ${journalNumber}%0A` +
-                            `Message: ${bookMessage}`;
-
-      // WhatsApp URL
-      let whatsappURL = `https://wa.me/97517898345?text=${whatsappMessage}`;
-
-      // Open WhatsApp
-      window.open(whatsappURL, '_blank');
-    });
-  </script> -->
     
 
 
