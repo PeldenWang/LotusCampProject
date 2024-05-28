@@ -13,7 +13,7 @@ body, html {
 }
 
 .nav-link:hover {
-    transform: scale(1.3);
+    transform: scale(1.2);
     color: #D1884F;
 }
 
@@ -29,18 +29,19 @@ body, html {
 
 /* CARD */
 .card:hover {
-    transform: scale(1.1);
+    transform: scale(0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
 }
 /*END OF THE CARD */
 
 
 
 
-/* THREE SELECTOR */
+/* WHERE ARE YOU FROM */
 .link-offset-2:hover {
     transform: scale(0.9);
 }
-/*END OF THE THREE SELECTOR */
+/*END OF THE WHERE ARE YOU FROM */
 
 /* <----------------END OF THE HOVERING FOR ALL----------------> */
 
@@ -66,7 +67,7 @@ h2 {
 .btn:hover {
     background-color: #44633F;
     color: white;
-    transform: scale(0.9);
+    transform: scale(1.1);
 }
 
 .viewButton {
@@ -238,6 +239,10 @@ h2 {
     margin-bottom: 20px;
 }
 
+.offer-card img:hover {
+    transform:scale(1.3);
+}
+
 #offericon {
     width: 70px;
     height: 70px;
@@ -264,7 +269,6 @@ h2 {
     }
 }
 /*END OF THE WHAT WE OFFER */
-
 
 
 
@@ -334,9 +338,10 @@ h2 {
   /* ACTIVITIES SECTION */
   .featurette img {
     flex: 0 0 auto;
-   height: auto;
-   width:550px ;
+    height: auto;
+    width:550px ;
     border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   }
   /* activies page heading */
   .featurette-heading {
@@ -365,11 +370,11 @@ h2 {
 
 
 
-  /* ARE YOU STUCK HERE */
+/* ARE YOU STUCK HERE AND CONTACT US */
   .stuckBox {
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 6px;
     padding: 25px;
   }
-    /*EN FO THE ARE YOU STUCK HERE */
+/*EN FO THE ARE YOU STUCK HERE AND CONTACT US*/
