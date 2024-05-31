@@ -467,7 +467,7 @@ h2 {
   }
   
   .button:hover::before {
-    font-size: 13px;
+    font-size: 14px;
     opacity: 1;
     bottom: unset;
     /* transform: translateY(-30px); */
