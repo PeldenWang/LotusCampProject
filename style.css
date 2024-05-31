@@ -12,14 +12,50 @@ body, html {
     color: white;
 }
 
-.nav-link:hover {
+/* .nav-link:hover {
     transform: scale(1.2);
     color: #D1884F;
-}
+} */
 
 .active {
     color: #D1884F !important;
 }
+
+.nav-link {
+    color: #e1e1e1;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  .nav-link:focus,
+  .nav-link:hover {
+    color: #D1884F;
+  }
+  
+  .nav-link:focus:after,
+  .nav-link:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  .nav-link:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #D1884F;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
 /*END FOR ALL NAVIGATION */
 
 
@@ -60,7 +96,7 @@ h2 {
 .btn {
     background-color: #D1884F;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -85,7 +121,7 @@ h2 {
 .number {
     font-size: 2.5rem;
     margin: 10px 0;
-    color: #1C4E80;
+    color: #D1884F;
 }
 
 .label {
@@ -378,3 +414,63 @@ h2 {
     padding: 25px;
   }
 /*EN FO THE ARE YOU STUCK HERE AND CONTACT US*/
+
+
+
+
+/* BACK TO TOP */
+.button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #D1884F;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: #44633F;
+    align-items: center;
+  }
+  
+  .button:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+  }
+  
+  .button::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: white;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+  }
+  
+  .button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+  }
+  /*END OF THE BACK TO TOP */
