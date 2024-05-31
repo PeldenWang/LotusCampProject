@@ -12,16 +12,11 @@ body, html {
     color: white;
 }
 
-/* .nav-link:hover {
-    transform: scale(1.2);
-    color: #D1884F;
-} */
-
 .active {
     color: #D1884F !important;
 }
 
-.nav-link {
+/* .nav-link {
     color: #e1e1e1;
     cursor: pointer;
     position: relative;
@@ -55,7 +50,7 @@ body, html {
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: width, left;
-  }
+  } */
 /*END FOR ALL NAVIGATION */
 
 
@@ -419,7 +414,7 @@ h2 {
 
 
 /* BACK TO TOP */
-.button {
+/* .button {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -452,7 +447,7 @@ h2 {
   }
   
   .button:hover .svgIcon {
-    /* width: 20px; */
+    
     transition-duration: 0.3s;
     transform: translateY(-200%);
   }
@@ -462,7 +457,7 @@ h2 {
     bottom: -20px;
     content: "Back to Top";
     color: white;
-    /* transition-duration: .3s; */
+   
     font-size: 0px;
   }
   
@@ -470,7 +465,7 @@ h2 {
     font-size: 14px;
     opacity: 1;
     bottom: unset;
-    /* transform: translateY(-30px); */
+   
     transition-duration: 0.3s;
-  }
+  } */
   /*END OF THE BACK TO TOP */
