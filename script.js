@@ -7,15 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const startCounting = (counter) => {
         const updateCount = () => {
             const target = +counter.getAttribute('data-target');
-            const count = +counter.innerText;
+            const count = +counter.innerText.replace('+', '');
 
             const inc = target / speed;
 
             if (count < target) {
-                counter.innerText = Math.ceil(count + inc);
+                counter.innerText = Math.ceil(count + inc) + '+';
                 setTimeout(updateCount, 1);
             } else {
-                counter.innerText = target;
+                counter.innerText = target + '+';
             }
         };
 

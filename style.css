@@ -150,7 +150,7 @@ h2 {
 }
 
 .homeSlide3_img{
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("./assests/images/briefing-hero.jpg");
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("./assests/images/briefing-hero.jpg");
 }
 
 .carousel-caption{
