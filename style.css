@@ -110,6 +110,73 @@ h2 {
 
 
 
+/* WHAT WE OFFER */
+.offers {
+    background-color: #dddddd;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.offers h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.offer-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.offer-card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    padding: 20px;
+    width: 23%;
+    text-align: center;
+}
+
+.offer-card img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.offer-card img:hover {
+    transform:scale(1.3);
+}
+
+#offericon {
+    width: 70px;
+    height: 70px;
+}
+
+.offer-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.offer-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .offer-cards {
+        flex-direction: column;
+    }
+
+    .offer-card {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+/*END OF THE WHAT WE OFFER */
+
+
+
 
 
 /* TOTAL VISITED */
@@ -231,75 +298,6 @@ h2 {
     border-radius: 6px;
 }
 /*END OF THE METHOD */
-
-
-
-
-
-/* WHAT WE OFFER */
-.offers {
-    background-color: #dddddd;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.offers h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-}
-
-.offer-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.offer-card {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    border-radius: 6px;
-    padding: 20px;
-    width: 23%;
-    text-align: center;
-}
-
-.offer-card img {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
-}
-
-.offer-card img:hover {
-    transform:scale(1.3);
-}
-
-#offericon {
-    width: 70px;
-    height: 70px;
-}
-
-.offer-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.offer-card p {
-    font-size: 1rem;
-    color: #555;
-}
-
-@media (max-width: 768px) {
-    .offer-cards {
-        flex-direction: column;
-    }
-
-    .offer-card {
-        width: 80%;
-        margin: 10px auto;
-    }
-}
-/*END OF THE WHAT WE OFFER */
 
 
 
