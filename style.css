@@ -60,11 +60,19 @@ body, html {
 
 /* CARD */
 .card:hover {
-    transform: scale(0.9);
+    transform: scale(0.98);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
 }
 /*END OF THE CARD */
 
+
+
+
+/* SPCIAL MEDIA ICONS HOVER*/
+.socialMedia:hover {
+    transform: scale(1.2);
+}
+/*END OF THE SPCIAL MEDIA ICONS HOVER*/
 
 
 
